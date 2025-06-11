@@ -15,7 +15,7 @@ class Loginscreen extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFFE7F9E9), Color(0xFFFFFFFF)],
+                colors: [Color.fromARGB(255, 35, 36, 35), Color.fromARGB(255, 51, 50, 50)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -28,16 +28,16 @@ class Loginscreen extends StatelessWidget {
                 Expanded(
                   flex: 6,
                   child: Image.asset(
-                    "assets/images/runner.jpg",
+                    "assets/images/running.png",
                     fit: BoxFit.cover,
                   ),
                 ),
                 Expanded(
                   flex: 4,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
                     decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 0, 0, 0),
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(30),
                       ),
@@ -50,13 +50,14 @@ class Loginscreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white
                           ),
                         ),
                         const SizedBox(height: 8),
                         const Text(
                           "From yoga to outdoor running to gym workouts\nNo peakForm equipment required.",
                           textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.black45, fontSize: 14),
+                          style: TextStyle(color: Color.fromARGB(115, 217, 217, 217), fontSize: 14),
                         ),
                         const SizedBox(height: 20),
                         _buildSignInButton(
@@ -77,16 +78,16 @@ class Loginscreen extends StatelessWidget {
                         const SizedBox(height: 10),
                         _buildSignInButton(
                           label: "Continue with Apple",
-                          logo: "assets/images/googlelogo.png",
+                          logo: "assets/images/apple.png",
                           onTap: () {},
-                          backgroundColor: Colors.black,
+                          backgroundColor: const Color.fromARGB(255, 47, 46, 46),
                           textColor: Colors.white,
                         ),
                         const SizedBox(height: 16),
                         RichText(
                           text: TextSpan(
                             text: "Already have an account? ",
-                            style: const TextStyle(color: Colors.black54),
+                            style: const TextStyle(color: Color.fromARGB(137, 255, 255, 255)),
                             children: [
                               TextSpan(
                                 text: "Sign In",

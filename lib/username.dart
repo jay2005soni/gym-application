@@ -8,36 +8,40 @@ class Username extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(
-        255,
-        255,
-        250,
-        250,
-      ), // 👈 Set background color here
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0), // 👈 Set background color here
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/images/pr.png"),
-              const SizedBox(height: 0),
+              ClipRRect(
+  borderRadius: BorderRadius.circular(1000), // Set the curve radius here
+  child: Image.asset(
+    "assets/images/user.png",
+    width: 200,
+    height: 200,
+    fit: BoxFit.cover,
+  ),
+)
+            ,  const SizedBox(height: 10),
               Text(
                 "Choose a username",
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: const Color.fromARGB(255, 255, 253, 253),
                 ),
               ),
+              SizedBox(height: 50,),
               Text(
                 "This is how will see you in a class , You can  \n \t\t\t\t\t\t\t\t\t\t\t\t\t\talways change it later",
-                style: TextStyle(),
+                style: TextStyle(color: Colors.white),
               ),
-              SizedBox(height: 0),
+              SizedBox(height: 100),
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: const Color.fromARGB(255, 37, 36, 36),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 width: 350,
@@ -49,20 +53,22 @@ class Username extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white
                       ),
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 10),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFF2F2F2),
+                        color: const Color.fromARGB(255, 27, 26, 26),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "@Jane Cooper",
-                        ),
+                        hintStyle: TextStyle(color: Color.fromARGB(255, 167, 161, 161))                  ),
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -74,7 +80,7 @@ class Username extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 100),
+              const SizedBox(height: 200),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(
@@ -84,7 +90,7 @@ class Username extends StatelessWidget {
                   // Handle button press
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 97, 224, 0),
+                  backgroundColor: Color.fromARGB(255, 219, 253, 65),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 150,
                     vertical: 15,
