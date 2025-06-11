@@ -133,7 +133,23 @@ class _WeeklyGoalState extends State<WeeklyGoal> {
                   });
                 },
               ),
-            ],
+              SizedBox(height: 170,)
+,            Center(
+  child: ElevatedButton(onPressed: () {
+                Navigator.pushReplacement(
+                  context, MaterialPageRoute( builder:(context) => const WeeklyGoal(),));
+              },
+              child: Text("Next"),
+              
+               style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 218, 218, 4)
+              , padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 15),
+               shape: RoundedRectangleBorder(
+                 borderRadius: BorderRadius.circular(30),
+               ),
+               ) ),
+)],
+
+           
           ),
         ),
       ),
