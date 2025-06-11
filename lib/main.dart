@@ -30,7 +30,10 @@ class SplashScreen extends StatelessWidget {
         children: [
           // Background image
           SizedBox.expand(
-            child: Image.asset("assets/images/Image.jpg", fit: BoxFit.cover),
+            child: Image.asset(
+              "assets/images/newimage.jpeg",
+              fit: BoxFit.cover,
+            ),
           ),
           // Content
           Align(
@@ -46,8 +49,8 @@ class SplashScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w900,
-                      fontSize: 24,
-                      fontFamily: 'lato',
+                      fontSize: 28,
+                      fontFamily: 'Aleo',
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -64,8 +67,8 @@ class SplashScreen extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 255, 213, 5),
-                      fixedSize: const Size(180, 40),
+                      backgroundColor: const Color.fromARGB(255, 159, 255, 5),
+                      fixedSize: const Size(190, 50),
                     ),
                     child: const Text(
                       "Get Started",

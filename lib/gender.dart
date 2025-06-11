@@ -57,10 +57,11 @@ class _GenderState extends State<Gender> {
                       ),
                     ],
                   ),
+                  SizedBox(width: 150),
                   Image.asset(
                     "assets/images/boygym.jpg",
-                    height: 10,
-                    width: 30,
+                    height: 250,
+                    width: 70,
                   ),
                   Spacer(),
                 ],
@@ -79,13 +80,17 @@ class _GenderState extends State<Gender> {
                   SizedBox(width: 20),
                   Text(
                     "👩🏻Female",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 240, 238, 236),
+                      fontSize: 16,
+                    ),
                   ),
 
                   // Optional: Add another checkbox here for "Female"
                 ],
               ),
             ),
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
@@ -93,7 +98,24 @@ class _GenderState extends State<Gender> {
                   MaterialPageRoute(builder: (context) => WeeklyGoal()),
                 );
               },
-              child: Text("Continue"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 218, 218, 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 150,
+                  vertical: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Text(
+                "Next",
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
